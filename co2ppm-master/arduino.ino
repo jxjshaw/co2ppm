@@ -4,12 +4,8 @@
 #define CHILD_ID_AIQ 0
 #define AIQ_SENSOR_ANALOG_PIN 6
 
-unsigned long SLEEP_TIME = 30*1000; // Sleep time between reads (in milliseconds)
-
 float valAIQ =0.0;
 float lastAIQ =0.0;
-
-
 
 void setup()
 {
@@ -48,6 +44,8 @@ void loop() {
         Serial.print("\n");
         lastAIQ = ceil(co2ppm);
   }
+
+   delay(3000);
 
 
 }
